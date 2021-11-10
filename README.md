@@ -1,4 +1,4 @@
-Jest does not seem to properly handle `process.env.TZ`
+Jest does not seem to properly handle `process.env.TZ`: [Setting process.env.TZ does not affect Dates](https://github.com/facebook/jest/issues/9856)
 
 To reproduce:
 
