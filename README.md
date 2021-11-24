@@ -25,3 +25,14 @@ To reproduce:
    ```
    TZ=EST npm test
    ```
+
+#### Workarounds
+
+- The `TZ` environment variable can be overridden directly in `jest.config.js` ([https://stackoverflow.com/a/58238786/399105](https://stackoverflow.com/a/58238786/399105))
+- Use Jest's [`setupFiles`](https://jestjs.io/docs/tutorial-react-native#setupfiles) configuration option to point to a setup file that sets `TZ` ([https://stackoverflow.com/a/58953365/399105](https://stackoverflow.com/a/58953365/399105))
+- Hardcode `TZ` in any scripts in `package.json` that call Jest, e.g.
+
+  ```json
+  "scripts": {
+    "test": "TZ=UTC jest",
+  ```
